@@ -4,7 +4,7 @@ Part1:
 
 - [x] list component
 - [x] list title
-- [] card component
+- [x] card component
 - [] input component
 
 part2:
@@ -27,3 +27,8 @@ part4:
 - [] BoxMenu
 - [] BoxoptionsImages
 - [] BoxoptionColors
+
+### Things that I learned as an extra
+
+- Can an input be of multiline -->
+- How to remove textarea's extend icons
