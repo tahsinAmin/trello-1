@@ -14,6 +14,6 @@ export default function InputCard({ onToggle }) {
          </div>
       </div>
    )
-   // https://youtu.be/QBKyDX7P7Tk?t=1956 33:11
+   // https://youtu.be/QBKyDX7P7Tk?t=2277
    // https://chakra-ui.com/docs/components/other/transitions#collapse-props
 }
