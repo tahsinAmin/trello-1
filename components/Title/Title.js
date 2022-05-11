@@ -23,9 +23,9 @@
 import React, { useState } from "react";
 
 import { FiMoreHorizontal } from "react-icons/fi";
-export default function Title() {
+export default function Title({ title }) {
   const [open, setOpen] = useState(false);
-  const [sText, setSText] = useState("Todo");
+  const [sText, setSText] = useState(title);
 
   return (
     <div>
