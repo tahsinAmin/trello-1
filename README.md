@@ -30,5 +30,15 @@ part4:
 
 ### Things that I learned as an extra
 
+- Why Chakra-UI > Tailwind
 - Can an input be of multiline -->
 - How to remove textarea's extend icons
+- Why useContext is useful
+- Learned about UUID, Universal Unique Identifier. And how to use it in ReactJS, using npm uuid
+
+### TODO
+
+- Having index copy as original but now for working purpose using index file
+- [] Empty string shouldn't be added. Maybe use a form for it
+
+<!-- https://youtu.be/7C-6jYdG4eg?t=1190 -->
