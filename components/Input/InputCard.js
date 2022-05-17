@@ -17,7 +17,7 @@ export default function InputCard({ listId, onClose }) {
             <textarea
                autoFocus
                className='w-full resize-none'
-               onBlur={() => onClose()}
+               // onBlur={() => onClose()}
                onChange={(e) => setCardTitle(e.target.value)}
                row="2"
                value={cardTitle}
