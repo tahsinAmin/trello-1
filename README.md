@@ -10,7 +10,7 @@ Part1:
 part2:
 
 - [x] initialize data
-- [] add card to list
+- [x] add card to list
 - [] add new list
 - [] update list title
 
@@ -38,7 +38,6 @@ part4:
 
 ### TODO
 
-- Having index copy as original but now for working purpose using index file
 - [] Empty string shouldn't be added. Maybe use a form for it
 
-<!-- https://youtu.be/7C-6jYdG4eg?t=1190 -->
+<!-- https://youtu.be/7C-6jYdG4eg?t=1271 -->
