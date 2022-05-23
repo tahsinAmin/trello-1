@@ -3,7 +3,8 @@ import List from "../components/List/List";
 import store from '../utils/store'
 import StoreApi from "../utils/storeApi";
 import { v4 as uuid } from 'uuid';
-
+import InputContainer from '../components/Input/InputContainer'
+import { Box, Button, Collapse, Flex } from "@chakra-ui/react"
 
 export default function Home() {
   const [data, setData] = useState(store)
@@ -26,17 +27,17 @@ export default function Home() {
     setData(newState)
   }
 
-  useEffect(() => {
-  }, [data])
-
   return (
     <StoreApi.Provider value={{ addMoreCard }}>
-      <div className="m-1">
-        {data.listIds.map((listId) => {
-          const list = data.lists[listId]
-          return <List key={listId} list={list} setData={setData} />
-        })}
-      </div>
+      <Box minHeight={"100vh"} className="m-1 bg-emerald-200">
+        <Flex className="m-1" >
+          {data.listIds.map((listId) => {
+            const list = data.lists[listId]
+            return <List key={listId} list={list} setData={setData} />
+          })}
+          <InputContainer type={"List"} />
+        </Flex>
+      </Box>
     </StoreApi.Provider>
 
   );

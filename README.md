@@ -40,4 +40,4 @@ part4:
 
 - [] Empty string shouldn't be added. Maybe use a form for it
 
-<!-- https://youtu.be/7C-6jYdG4eg?t=1271 -->
+<!-- https://youtu.be/7C-6jYdG4eg?t=1778 -->
