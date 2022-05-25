@@ -2,19 +2,19 @@ import React, { useState, useContext } from 'react';
 import { MdClear } from "react-icons/md";
 import storeApi from '../../utils/storeApi';
 export default function InputCard({ listId, onClose, type }) {
-  const { addMoreCard } = useContext(storeApi)
+  const { addMoreCard, addMoreList } = useContext(storeApi)
   const [title, setTitle] = useState("");
 
   const handleBtnConfirm = () => {
-    addMoreCard(title, listId)
+    if (type == 'Card') {
+      addMoreCard(title, listId)
+    } else {
+      addMoreList(title)
+    }
     setTitle("")
     onClose()
   }
 
-  // const handleBlur = () => {
-  //   setTitle("")
-  //   onClose()
-  // }
 
   return (
     <>
@@ -25,7 +25,7 @@ export default function InputCard({ listId, onClose, type }) {
           onChange={(e) => setTitle(e.target.value)}
           row="2"
           value={title}
-          placeholder={type === 'Card' ? 'Enter a title of this card' : "Enter list title"}
+          placeholder={type === 'Card' ? 'Enter a title of this card' : "Enter list title..."}
         />
       </div>
       <div className='confirm m-1 mt-0 flex justify-start items-center space-x-4'>

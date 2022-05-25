@@ -6,14 +6,13 @@ export default function InputContainer({ listId, type }) {
    const { isOpen, onClose, onOpen } = useDisclosure()
 
    return (
-      <div className='w-64'>
+      <div className='w-64 '>
          <Collapse in={isOpen} animateOpacity>
             <InputCard listId={listId} onClose={onClose} type={type} />
          </Collapse>
-         <div className='p-1 pl-0 pb-0 m-1 mt-0 hover:bg-gray-300 transition duration-200 cursor-pointer'>
+         <div className='p-1 m-1 mt-0 bg-[#ebecf0] hover:bg-gray-300 transition duration-200 cursor-pointer'>
             {!isOpen && <p onClick={onOpen}
-               className='text-gray-500'>  {`Add ${type === 'Card' ? "a Card" : 'another List'}...`} </p>
-
+               className='text-gray-500'>  {`+ Add ${type === 'Card' ? "a Card" : 'another List'}`} </p>
             }
          </div>
       </div>

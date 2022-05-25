@@ -27,10 +27,25 @@ export default function Home() {
     setData(newState)
   }
 
+  const addMoreList = (listTitle) => {
+    const listId = uuid()
+    const newLists = {
+      ...data.lists,
+      [listId]: {
+        id: listId,
+        title: listTitle,
+        cards: []
+      }
+    }
+    const newListIds = [...data.listIds, listId]
+    setData({ ...data, lists: newLists, listIds: newListIds })
+
+  }
+
   return (
-    <StoreApi.Provider value={{ addMoreCard }}>
-      <Box minHeight={"100vh"} className="m-1 bg-emerald-200">
-        <Flex className="m-1" >
+    <StoreApi.Provider value={{ addMoreCard, addMoreList }}>
+      <Box minHeight={"100vh"} className="p-1 bg-emerald-200">
+        <Flex className="p-1">
           {data.listIds.map((listId) => {
             const list = data.lists[listId]
             return <List key={listId} list={list} setData={setData} />

@@ -11,7 +11,7 @@ part2:
 
 - [x] initialize data
 - [x] add card to list
-- [] add new list
+- [x] add new list
 - [] update list title
 
 part3:
@@ -40,4 +40,4 @@ part4:
 
 - [] Empty string shouldn't be added. Maybe use a form for it
 
-<!-- https://youtu.be/7C-6jYdG4eg?t=1778 -->
+<!-- https://youtu.be/7C-6jYdG4eg?t=2324 -->
