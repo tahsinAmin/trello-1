@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { MdClear } from "react-icons/md";
 import storeApi from '../../utils/storeApi';
+
 export default function InputCard({ listId, onClose, type }) {
   const { addMoreCard, addMoreList } = useContext(storeApi)
   const [title, setTitle] = useState("");
@@ -21,7 +22,7 @@ export default function InputCard({ listId, onClose, type }) {
       <div>
         <textarea
           autoFocus
-          className='w-full resize-none'
+          className='w-full resize-none p-1'
           onChange={(e) => setTitle(e.target.value)}
           row="2"
           value={title}

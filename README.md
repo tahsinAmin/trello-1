@@ -12,7 +12,7 @@ part2:
 - [x] initialize data
 - [x] add card to list
 - [x] add new list
-- [] update list title
+- [x] update list title
 
 part3:
 
@@ -39,5 +39,25 @@ part4:
 ### TODO
 
 - [] Empty string shouldn't be added. Maybe use a form for it
+- [] Prevent Taking empty inputs and titles
+- [] Using of Editable
 
-<!-- https://youtu.be/7C-6jYdG4eg?t=2324 -->
+<!--
+
+import {
+Editable,
+EditableInput,
+EditableTextarea,
+EditablePreview,
+} from "@chakra-ui/react";
+
+<Box h='50vh' bg='gray.500' border='2px'>
+<Editable defaultValue='Take somze chakra' >
+  <EditablePreview/>
+  <EditableInput />
+</Editable>
+</Box> -->
+
+<!-- https://youtu.be/etrdQrYIG5g?t=2 -->
+
+<!-- Make a Title2 Component so that I can try the Editable  -->

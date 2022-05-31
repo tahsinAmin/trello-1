@@ -1,46 +1,34 @@
-// import {
-//   Box,
-//   Editable,
-//   EditableInput,
-//   EditableTextarea,
-//   EditablePreview,
-//   ChakraProvider,
-// } from "@chakra-ui/react";
-// import { useState } from "react";
-
-// export default function Title() {
-//   const [open, setOpen] = useState(false);
-//   return (
-//     <ChakraProvider>
-//       <Editable defaultValue='Take some chakra'>
-//         <EditablePreview />
-//         <EditableInput />
-//       </Editable>
-//     </ChakraProvider>
-//   );
-// }
-
-import React, { useState } from "react";
-
+import React, { useContext, useState } from "react";
 import { FiMoreHorizontal } from "react-icons/fi";
-export default function Title({ title }) {
+import storeApi from "../../utils/storeApi";
+
+export default function Title({ title, listId }) {
   const [open, setOpen] = useState(false);
-  const [sText, setSText] = useState(title);
+  const [newTitle, setNewTitle] = useState(title);
+  const { updateListTitle } = useContext(storeApi)
+  const handleOnChange = (e) => {
+    setNewTitle(e.target.value);
+  }
+  const handleOnBlur = () => {
+    updateListTitle(newTitle, listId)
+    setOpen(false)
+  }
 
   return (
     <div>
       {open ? (
         <input
-          autofocus
+          onChange={handleOnChange}
+          autoFocus
           type='text'
           className='bg-gray-300 w-full border-none font-semibold text-xl'
-          value={sText}
-          onBlur={() => setOpen(!open)}
-          onChange={(e) => setSText(e.target.value)}
+          value={newTitle}
+          onBlur={handleOnBlur}
+
         />
       ) : (
         <div className="flex justify-between p-1 items-center">
-          <p onClick={() => setOpen(!open)} className='flex-1 font-semibold text-xl'>{sText}</p>
+          <p onClick={() => setOpen(true)} className='flex-1 font-semibold text-xl'>{newTitle}</p>
           <FiMoreHorizontal />
         </div>
       )}
