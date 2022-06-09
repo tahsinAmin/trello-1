@@ -42,22 +42,4 @@ part4:
 - [] Prevent Taking empty inputs and titles
 - [] Using of Editable
 
-<!--
-
-import {
-Editable,
-EditableInput,
-EditableTextarea,
-EditablePreview,
-} from "@chakra-ui/react";
-
-<Box h='50vh' bg='gray.500' border='2px'>
-<Editable defaultValue='Take somze chakra' >
-  <EditablePreview/>
-  <EditableInput />
-</Editable>
-</Box> -->
-
-<!-- https://youtu.be/etrdQrYIG5g?t=2 -->
-
-<!-- Make a Title2 Component so that I can try the Editable  -->
+<!-- https://youtu.be/etrdQrYIG5g?t=370 -->

@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { FiMoreHorizontal } from "react-icons/fi";
+
 import storeApi from "../../utils/storeApi";
 
 export default function Title({ title, listId }) {
@@ -29,7 +29,7 @@ export default function Title({ title, listId }) {
       ) : (
         <div className="flex justify-between p-1 items-center">
           <p onClick={() => setOpen(true)} className='flex-1 font-semibold text-xl'>{newTitle}</p>
-          <FiMoreHorizontal />
+
         </div>
       )}
     </div>
