@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import List from "../components/List/List";
+import dynamic from "next/dynamic";
+const List = dynamic(() => import("../components/List/List"), { ssr: false });
 import store from '../utils/store'
 import StoreApi from "../utils/storeApi";
 import { v4 as uuid } from 'uuid';
@@ -105,7 +106,7 @@ export default function Home() {
       {isBrowser ? <DragDropContext
       // onDragEnd={onDragEnd}
       >
-        <Box as={Wrap} minHeight={"100vh"} className="p-1 bg-emerald-200">
+        <Box as={Wrap} minHeight={"100vh"} className="p-1 bg-emerald-200" spacing={0}>
           {data.listIds.map((listId) => {
             const list = data.lists[listId]
             return <List key={listId} list={list} />
